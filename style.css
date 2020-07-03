@@ -1,12 +1,13 @@
 #box{
+    display: grid;
+    align-items: center;
+    margin-left: 14px;
+    margin-right: 14px;
     background:#16a085;
     color:#fff;
     text-align: center;
-    margin-left: 14px;
-    margin-right: 14px;
     font-size: 30px;
-    display: grid;
-    align-items: center;
+    border: double 20px black;
 }
 
 i {
@@ -15,6 +16,7 @@ i {
     position: relative; /*important*/
 }
 
+/*---------------------------------------------------------------*/
 body{
     font-size: 17px;
     font-family: arial;
@@ -42,7 +44,7 @@ header h1 {
     transform: scale(1, 1.7);
     padding-top: 8px;
 }
-  
+
 svg {
     position: absolute;
     bottom: 0;

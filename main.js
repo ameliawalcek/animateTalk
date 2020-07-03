@@ -5,8 +5,8 @@ $('#fadeOut').click(function () {
 $('#fadeIn').click(function () {
     $('#box').fadeIn(3000)
 })
-$('#fadeTog').click(function () {
-    $('#box').fadeToggle(5000);
+$('#fadeToggle').click(function () {
+    $('#box').fadeToggle(3000);
 })
 $('#stop').click(function () {
     $('#box').stop()
@@ -15,17 +15,7 @@ $("#fadeto").click(function () {
     $('#box').fadeTo("fast", Math.random())
 })
 
-//spider
-$("#btnhide").click(function () {
-    $(".fa-spider").hide("fast")
-})
-$('#moveRight').click(function () {
-    $('.fa-spider').animate({
-        left: 500,
-        fontSize: '300px',
-        opacity: '0.5'
-    })
-})
+//spider relative
 $('#moveLeft').click(function () {
     $('.fa-spider').animate({
         left: 0,
@@ -33,14 +23,22 @@ $('#moveLeft').click(function () {
         opacity: '1'
     })
 })
+
+$('#moveRight').click(function () {
+    $('.fa-spider').animate({
+        left: 500,
+        fontSize: '350px',
+        opacity: '0.5'
+    })
+})
+
 $('#finish').click(function () {
     $('.fa-spider').finish()
 })
 
 $('#moveAround').click(function () {
-    const spider = $('.fa-spider')
-
-    spider.animate({ left: 300 }, 900)
+    $('.fa-spider')
+        .animate({ left: 300 }, 5000)
         .animate({ left: 600 })
         .animate({ left: 200 })
         .animate({ left: 300, fontSize: '300px' })
@@ -52,5 +50,10 @@ $('#moveAround').click(function () {
         .animate({ top: 200, fontSize: '1px' })
         .animate({ fontSize: '200px' })
         .animate({ left: 0, top: 100, fontSize: '100px' })
-        .animate({ top: 0 })
+        .animate({ left: 600, top: 300})
+        .animate({ left: 0, top: 0 })
+})
+
+$("#btnhide").click(function () {
+    $(".fa-spider").hide(100).show()
 })
